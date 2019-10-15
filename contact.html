@@ -5,7 +5,6 @@
 <title>联系我们-益清诚</title>
 <meta name="keywords" content="" />
 <meta name="description" content="联系我们" />
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=0.3, maximum-scale=1.0, minimum-scale=0.3">
 <link rel="shortcut icon" href="res/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="res/Public/Css/global.css" >
@@ -18,13 +17,14 @@
 <script type="text/javascript" src="res/Public/Js/jquery.superslide.2.1.1.js" ></script>
 <link rel="stylesheet" type="text/css" href="res/Public/Js/fancybox/jquery.fancybox-1.3.4.css"  />
 <script type="text/javascript" src="res/Public/Js/fancybox/jquery.fancybox-1.3.4.js" ></script>
-<script type="text/javascript" src="../api.map.baidu.com/api-key=&v=1.1&services=true" ></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&;v=1.1&;services=true"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=1.1&;ak=&;services=true&;t=20130716024058"></script>
+  <link rel="stylesheet" type="text/css" href="https://api.map.baidu.com/res/11/bmaps.css">
     <script>
 	$(function(){
     $(".mesmore").fancybox();
 	})
     </script>
-
 
 </head>
 <body>
@@ -313,7 +313,7 @@ $(document).ready(function(){
     }
     //创建一个Icon
     function createIcon(json){
-        var icon = new BMap.Icon("../app.baidu.com/index.htm"/*tpa=http://app.baidu.com/map/images/us_mk_icon.png*/, new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
 
